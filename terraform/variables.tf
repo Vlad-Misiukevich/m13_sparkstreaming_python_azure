@@ -1,12 +1,21 @@
 variable "ENV" {
   type = string
   description = "The prefix which should be used for all resources in this environment. Make it unique, like ksultanau."
+  default = "vmisiukevich"
 }
 
 variable "LOCATION" {
   type = string
   description = "The Azure Region in which all resources in this example should be created."
   default = "westeurope"
+}
+
+variable "spark_version" {
+  default = "7.3.x-scala2.12"
+}
+
+variable "node_type_id" {
+  default = "Standard_L4s"
 }
 
 variable "BDCC_REGION" {
